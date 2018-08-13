@@ -1,0 +1,17 @@
+{
+  "name": "naive-bayes",
+  "version": "0.1.0",
+  "description": "Classifies documents using Naive Bayes Classification method",
+  "main": "index.js",
+  "dependencies": {
+    "should": "^13.2.3"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha src/**/*.test.js"
+  },
+  "author": "Harry Ganz <hganz@harryganz.com>",
+  "license": "MIT"
+}
