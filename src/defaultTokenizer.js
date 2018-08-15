@@ -7,9 +7,11 @@
  * @param doc {string} Document to tokenize
  */
 module.exports = (doc) => {
+  if (typeof doc !== "string") {
+    throw new Error(`Expected doc to be string. Got ${typeof doc}`);
+  }
   return doc
-    .replace(/[.,?!;:\-]/g,"")
-    .replace(/\s{2,}/g,"")
+    .replace(/[.,?!;:\-\n\t\r\f\b\v]/g,"")
     .split(" ")
     .filter(word => word !== '')
     .map(word => word.toLowerCase());
